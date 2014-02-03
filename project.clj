@@ -1,4 +1,4 @@
-(defproject com.aerokode.conversions "0.0.5"
+(defproject com.aerokode.conversions "0.0.6"
   :description "Simple integer conversions."
   :url "http://aerokode.com"
   :license {:name "Eclipse Public License"
