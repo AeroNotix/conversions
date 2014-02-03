@@ -18,6 +18,7 @@
   (bit-or (bit-shift-left n 8) (bit-and b 0xFF)))
 
 (defn uuid-from-base64 [ba]
-  (let [msb (reduce unpack 0 (take 8 ba))
+  (let [ba (b64/decode ba)
+        msb (reduce unpack 0 (take 8 ba))
         lsb (reduce unpack 0 (take 8 (drop 8 ba)))]
     (java.util.UUID. msb lsb)))
